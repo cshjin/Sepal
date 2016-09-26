@@ -161,10 +161,10 @@ b = u[{}]     -- We might expect 1729, but it's nil:
 -- strings & numbers are more portable keys.
 
 -- A one-table-param function call needs no parens:
-function h(x) print(x.key1) end
+function pr(x) print(x.key1) end
 h{key1 = 'Sonmi~451'}  -- Prints 'Sonmi~451'.
 
-for key, val in pairs(u) do  -- Table iteration.
+for key, val in pairs(_G) do  -- Table iteration.
   print(key, val)
 end
 
@@ -326,8 +326,8 @@ end
 -- 4. Modules.
 ----------------------------------------------------
 
-
---[[ I'm commenting out this section so the rest of
+--[[
+-- I'm commenting out this section so the rest of
 --   this script remains runnable.
 
 -- Suppose the file mod.lua looks like this:
